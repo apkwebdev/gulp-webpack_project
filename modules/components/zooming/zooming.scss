@@ -1,15 +1,40 @@
+$buttonZoomingFontSize: 24px;
+$buttonZoomingSize: $buttonZoomingFontSize * 2;
+$buttonZoomingPadding: $buttonZoomingFontSize / 4;
+$buttonZoomingEdgeIndent: $buttonZoomingFontSize / 2;
+$buttonZoomingColor: #DBC7AB;
+$buttonZoomingTextShadow: $buttonZoomingColor;
+$buttonZoomingBackground: #1E1A18;
+
 #zooming {
-  font-weight: 700;
-  @include fst(width, 88px);
-  @include fst(height, 44px);
+  font-weight: 400;
+  font-style: italic;
+  @include fst(font-size, $buttonZoomingFontSize);
+  color: $buttonZoomingColor;
+  text-shadow: 0px 0px ($buttonZoomingFontSize / 4) $buttonZoomingTextShadow;
+  
+  @include fst(width, $buttonZoomingSize + $buttonZoomingPadding);
+  @include fst(height, $buttonZoomingSize + $buttonZoomingPadding);
+
   border-radius: 50%;
-  @include fst(margin-left, 16px);
-  @include fst(margin-right, 16px);
-  background-color: rgb(112, 196, 28);
-  // position: absolute;
-  // top: 50%; 
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  box-shadow: 0px 0px $buttonZoomingPadding ($buttonZoomingPadding / 2) $buttonZoomingColor;
+
+  background: radial-gradient(ellipse farthest-side at bottom right,$buttonZoomingTextShadow 6.25%, $buttonZoomingBackground 90%);
+
+  @include fst(padding-right, $buttonZoomingPadding * 1.5);
+  @include fst(padding-bottom, $buttonZoomingPadding * 3.5);
+
+  position: fixed;
+  @include fst(right, $buttonZoomingEdgeIndent);
+  @include fst(bottom, $buttonZoomingEdgeIndent); 
+  
+  transition: all linear .2s;
+}
+
+#zooming:hover {
+  color: white;
+  text-shadow: 0px 0px ($buttonZoomingFontSize / 8) black;
+  box-shadow: 0px 0px $buttonZoomingPadding ($buttonZoomingPadding / 2) white;
 }
 
 // bp отключения кноки задаётся в соответствующем шаблоне! например, 
