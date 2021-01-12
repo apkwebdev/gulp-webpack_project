@@ -2,43 +2,39 @@ $buttonZoomingFontSize: 24px;
 $buttonZoomingSize: $buttonZoomingFontSize * 2;
 $buttonZoomingPadding: $buttonZoomingFontSize / 4;
 $buttonZoomingEdgeIndent: $buttonZoomingFontSize / 2;
-$buttonZoomingColor: #DBC7AB;
+$buttonZoomingColor: #dbc7ab;
 $buttonZoomingTextShadow: $buttonZoomingColor;
-$buttonZoomingBackground: #1E1A18;
+$buttonZoomingBackground: #1e1a18;
 
 #zooming {
-  font-weight: 400;
-  font-style: italic;
-  @include fst(font-size, $buttonZoomingFontSize);
-  color: $buttonZoomingColor;
-  text-shadow: 0px 0px ($buttonZoomingFontSize / 4) $buttonZoomingTextShadow;
-  
+  position: fixed;
+
+  @include fst(right, $buttonZoomingEdgeIndent);
+  @include fst(bottom, $buttonZoomingEdgeIndent);
   @include fst(width, $buttonZoomingSize + $buttonZoomingPadding);
   @include fst(height, $buttonZoomingSize + $buttonZoomingPadding);
-
-  border-radius: 50%;
-  box-shadow: 0px 0px $buttonZoomingPadding ($buttonZoomingPadding / 2) $buttonZoomingColor;
-
-  background: radial-gradient(ellipse farthest-side at bottom right,$buttonZoomingTextShadow 6.25%, $buttonZoomingBackground 90%);
-
   @include fst(padding-right, $buttonZoomingPadding * 1.5);
   @include fst(padding-bottom, $buttonZoomingPadding * 3.5);
+  @include fst(font-size, $buttonZoomingFontSize);
 
-  position: fixed;
-  @include fst(right, $buttonZoomingEdgeIndent);
-  @include fst(bottom, $buttonZoomingEdgeIndent); 
-  
+  font-style: italic;
+  font-weight: 400;
+  color: $buttonZoomingColor;
+  text-shadow: 0 0 ($buttonZoomingFontSize / 4) $buttonZoomingTextShadow;
+  background: radial-gradient(ellipse farthest-side at bottom right, $buttonZoomingTextShadow 6.25%, $buttonZoomingBackground 90%);
+  border-radius: 50%;
+  box-shadow: 0 0 $buttonZoomingPadding ($buttonZoomingPadding / 2) $buttonZoomingColor;
   transition: all linear .2s;
 }
 
 #zooming:hover {
   color: white;
-  text-shadow: 0px 0px ($buttonZoomingFontSize / 8) black;
-  box-shadow: 0px 0px $buttonZoomingPadding ($buttonZoomingPadding / 2) white;
+  text-shadow: 0 0 ($buttonZoomingFontSize / 8) black;
+  box-shadow: 0 0 $buttonZoomingPadding ($buttonZoomingPadding / 2) white;
 }
 
-// bp отключения кноки задаётся в соответствующем шаблоне! например, 
-// в col1.scss 
+// bp отключения кноки задаётся в соответствующем шаблоне! например,
+// в col1aux.scss
 //   @include bp($container-page-aux) { #zooming { display: none; } }
-// в col3.scss 
+// в col3.scss
 //   @include bp($container-page) { #zooming { display: none; } }

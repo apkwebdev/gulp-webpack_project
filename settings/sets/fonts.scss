@@ -7,7 +7,7 @@
 // конвертеры шрифтов
 // https://anyconv.com/ru/konverter-shriftov/
 
-
+//
 
 // === === !!!  Подключение локальных шрифтов  !!! === ===
 // Сначала сами шрифты размещаем в ./fonts/
@@ -23,6 +23,7 @@
 // @include font-face('Open Sans', '../fonts/opensans/opensanslightitalic/opensanslightitalic', 300, 'italic');
 // @include font-face('Open Sans', '../fonts/opensans/opensanssemibolditalic/opensanssemibolditalic', 600, 'italic');
 
+//
 
 // ************** !!! Дальнейшие действия !!!  *************** \\
 // После подключения локальных шрифтов здесь или удалённых в ./settings/sets/fonts.pug заходим в ./settings/presets/vars.scss и задаём значение переменной $font-family!!!

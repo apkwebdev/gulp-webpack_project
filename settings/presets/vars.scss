@@ -33,11 +33,11 @@ $columns24: 24;
 
 // === containers and wrappers ===
 // Для основного шаблона, например, ./templates/col3/col3.scss
-$container-page: 1280px !global; 
-$container-page-padding: 0px !global;
+$container-page: 1280px !global;
+$container-page-padding: 0 !global;
 // Для дополнительного шаблона, например, ./templates/col1/col1.scss
 $container-page-aux: 768px !global;
-$container-page-aux-padding: 0px !global;
+$container-page-aux-padding: 0 !global;
 
 // === блоки шаблонов ===
 $sidebar-width: 240px;
@@ -49,12 +49,11 @@ $main-width: main-width(100%);
 //В случае иного шаблона где потребуется явная задача ширины можно воспользоваться другими возможными значениями функции расчёта размера main-width: sma(по умолчанию), sm, ma, m, другие символы вернут значение ширины равное 100%
 $main-padding: 16px;
 
-
 // === === Переменные для установок ./settings/sets/ === ===
 // === ./settings/sets/basic.scss ===
 
 // ===  html =
-$root-line-height: 1; 
+$root-line-height: 1;
 // Корневой размер шрифта всего html-документа, задаётся в процентах.
 $root-font-size-percent: 100%;
 
@@ -64,25 +63,25 @@ $font-family: 'Exo 2', 'Arial', sans-serif;
 
 // Размер экрана $screen-size, на котором нам нужен определённый размер шрифта $body-font-size. Глобальные переменные масштабируемых размеров.
 $screen-size: 1024px !global;
-$body-font-size: 18px !global; 
+$body-font-size: 18px !global;
 $body-font-size-lower: 16px !global;
 // коэффициент соотношения размеров контейнера к размеру экрана, при котором нам необходим шрифт определённого размера
 $screen-ratio: $container-page / $screen-size !global;
-// ===  speed of text resizing  === 
-$str: $body-font-size-lower / $body-font-size !global; 
+// ===  speed of text resizing  ===
+$str: $body-font-size-lower / $body-font-size !global;
 // ===  speed of containers resizing  ===
 $scr: .75 !global;
 
 // ===  Стили заголовков  ===
 $font-weight-headings: 400;
 
-// Толщины шрифта, b - bold, sb - semibold, n - normal, l - light 
+// Толщины шрифта, b - bold, sb - semibold, n - normal, l - light
 $fwb : 700;
 $fwsb : 600;
 $fwn : 400;
 $fwl : 300;
 
-// Стили шрифта 
+// Стили шрифта
 $fsn : normal;
 $fsi : italic;
 

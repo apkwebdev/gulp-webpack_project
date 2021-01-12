@@ -1,20 +1,22 @@
 @import "../../styles/_presets.scss";
 
 .main-index {
-  
   &__title {
-    @include fst(font-size, 27px);
-    line-height: 1.5;
-    font-weight: 700;
-    text-align: center;
     @include fst(margin-bottom, 24px);
-  }
-  &__subtitle {
-    @include fst(font-size, 24px);
-    line-height: 1.35;
-    font-weight: 600;
+    @include fst(font-size, 27px);
+
+    font-weight: 700;
+    line-height: 1.5;
     text-align: center;
+  }
+
+  &__subtitle {
     @include fst(margin-bottom, 20px);
+    @include fst(font-size, 24px);
+
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: center;
   }
 }
 
@@ -22,6 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   @include fst(margin-bottom, 20px);
 }
 
@@ -30,6 +33,7 @@
 
 .pngicon-gears {
   background-image: url(../../images/sprites/sprite.png);
+
   @include fst(background-position-x, $pngicon-gears-x);
   @include fst(background-position-y, $pngicon-gears-y);
   @include fst(background-position-x, $pngicon-gears-offset-x);
@@ -41,6 +45,7 @@
 
 .pngicon-lightbulb {
   background-image: url(../../images/sprites/sprite.png);
+
   @include fst(background-position-x, $pngicon-lightbulb-x);
   @include fst(background-position-y, $pngicon-lightbulb-y);
   @include fst(background-position-x, $pngicon-lightbulb-offset-x);
@@ -52,6 +57,7 @@
 
 .pngicon-rocket {
   background-image: url(../../images/sprites/sprite.png);
+
   @include fst(background-position-x, $pngicon-rocket-x);
   @include fst(background-position-y, $pngicon-rocket-y);
   @include fst(background-position-x, $pngicon-rocket-offset-x);
@@ -68,18 +74,17 @@
 
 .svgicon {
   @include svgbox-fst(512, 512, 64px);
+
   fill: red;
 }
 
 .svgicon-tools,
 .svgicon-wrench { fill: #333; }
 
-.svgicon-spinner { 
-  animation: spinner-rotate .75s linear 0s infinite normal; 
-}
-  
+.svgicon-spinner { animation: spinner-rotate .75s linear 0s infinite normal; }
+
 @keyframes spinner-rotate { 100% { transform: rotate(360deg); } }
 
-/****************************************************************************/
-/***********************===  mediaqueries starting  ===**********************/
-/***********************                               **********************/
+/****************************************************************************
+*********************** ===  mediaqueries starting  === *********************
+***********************                                 ********************/

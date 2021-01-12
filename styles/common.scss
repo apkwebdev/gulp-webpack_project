@@ -1,8 +1,37 @@
 @import "_presets.scss";
 @import "_sets.scss";
-/**************===  starting the styles of the common modules  ===*************/
+
+/************** === starting the styles of the common modules === *************/
+
+.page {
+  &__header-wrap,
+  &__footer-wrap { background-color: rgb(167, 145, 145); }
+}
+
+.content_page {
+  &__sidebar-wrap,
+  &__aside-wrap { background-color: rgb(145, 167, 145); }
+  &__main-wrap { background-color: rgb(161, 172, 61); }
+
+  &__sidebar-wrap {
+    @include bp($bp4) { display: none; }
+  }
+
+  &_aside-wrap {
+    @include bp($bp5) { display: none; }
+
+    // здесь мы увеличиваем скорость уменьшения .content_page__aside-wrap
+    // причём, делаем это в bp меньше $container-page хотя бы на 1px, чтобы оно не переопределило правило, заданное миксином fst в bp с $container-page.
+    @include bp($container-page - 1px) {
+      min-width: fst($container-page, $aside-width + 35px, .57);
+      max-width: fst($container-page, $aside-width + 35px, .57);
+    }
+  }
+}
+
 @import "../modules/blocks/header/header.scss";
 @import "../modules/blocks/sidebar/sidebar.scss";
 @import "../modules/blocks/aside/aside.scss";
 @import "../modules/blocks/footer/footer.scss";
+
 /******************  ending the styles of the common modules ******************/
