@@ -1,1 +1,22 @@
 @import "../../../#picker/templates/col3/col3.scss";
+
+.content_page {
+  &__sidebar-wrap {
+    @include bp($bp4) { display: none; }
+  }
+
+  &__aside-wrap {
+    @include bp($bp5) { display: none; }
+
+    // здесь мы увеличиваем скорость уменьшения .content_page__aside-wrap
+    // причём, делаем это в bp меньше $container-page хотя бы на 1px, чтобы оно не переопределило правило, заданное миксином fst в bp с $container-page.
+    @include bp($container-page - 1px) {
+      min-width: fst($container-page, $aside-width + 35px, .57);
+      max-width: fst($container-page, $aside-width + 35px, .57);
+    }
+  }
+}
+
+/*******************************************************************************
+************************ ===  mediaqueries starting  === ***********************
+************************                                 **********************/
