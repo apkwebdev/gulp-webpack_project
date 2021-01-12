@@ -34,10 +34,10 @@ $columns24: 24;
 // === containers and wrappers ===
 // Для основного шаблона, например, ./templates/col3/col3.scss
 $container-page: 1280px !global;
-$container-page-padding: 0 !global;
+$container-page-padding: 0px !global;
 // Для дополнительного шаблона, например, ./templates/col1/col1.scss
 $container-page-aux: 768px !global;
-$container-page-aux-padding: 0 !global;
+$container-page-aux-padding: 0px !global;
 
 // === блоки шаблонов ===
 $sidebar-width: 240px;
