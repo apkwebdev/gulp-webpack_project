@@ -33,7 +33,7 @@ $columns24: 24;
 
 // === containers and wrappers ===
 // Для основного шаблона, например, ./templates/col3/col3.scss
-$container-page: 1280px !global;
+$container-page: 1024px !global;
 $container-page-padding: 0px !global;
 // Для дополнительного шаблона, например, ./templates/col1/col1.scss
 $container-page-aux: 768px !global;
@@ -61,17 +61,21 @@ $root-font-size-percent: 100%;
 $font-family: 'Exo 2', 'Arial', sans-serif;
 //$font-family: 'Open Sans', 'Arial', sans-serif;
 
-// Размер экрана $screen-size, на котором нам нужен определённый размер шрифта $body-font-size. Глобальные переменные масштабируемых размеров.
-$screen-size: 1024px !global;
-$body-font-size: 18px !global;
-$body-font-size-lower: 16px !global;
-// коэффициент соотношения размеров контейнера к размеру экрана, при котором нам необходим шрифт определённого размера
-$screen-ratio: $container-page / $screen-size !global;
-// ===  speed of text resizing  ===
-$str: $body-font-size-lower / $body-font-size !global;
+//
+// Глобальные переменные масштабируемых размеров.
+//
 // ===  speed of containers resizing  ===
 $scr: .75 !global;
+// Переменные размеров шрифта.
+// $body-font-size - это размер шрифта при размере окна браузера равному или больше размерам контейнера $container-page.
+$body-font-size: 18px !global;
+// $body-font-size-lower - это размер шрифта при размере окна браузера равному $container-page * $scr
+$body-font-size-lower: 16px !global;
+// ===  speed of text resizing  ===
+$str: $body-font-size-lower / $body-font-size !global;
 
+//
+//
 // ===  Стили заголовков  ===
 $font-weight-headings: 400;
 
